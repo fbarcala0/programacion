@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Array4 {
     /**
-     * Función que muestra las letras de una cadena en lineas distintas
+     * Muestra las letras de una cadena en lineas distintas
      * @param texto . Cadena de texto que introducimos
      */
     public static void muestraEnLinea(String texto){
@@ -13,9 +13,9 @@ public class Array4 {
             System.out.printf("%s\n", texto.charAt(i));
         }
     }
-    
+  //  git remote add origin https://github.com/fbarcala0/programacion.git
     /**
-     * Función que devuelve un fragmento de una cadena de texto que indicamos
+     * Devuelve un fragmento de una cadena de texto que indicamos
      * @param cadena . Cadena de texto
      * @param pos . Posición en la que queremos que recoja
      * @param longi. Longitud de la cadena que queremos mostrar
@@ -41,7 +41,7 @@ public class Array4 {
     }
     
     /**
-     * Función que muestra una cadena de texto çentrada en consola de 80
+     * Muestra una cadena de texto çentrada en consola de 80
      * @param texto . Texto es la cadena de texto
      */
     public static void muestraCentrado(String texto){
@@ -76,7 +76,7 @@ public class Array4 {
     }
     
     /**
-     * 
+     * Convierta una cadena en vector
      * @param cadena . Cadena de texto a pasar
      * @return hector, que es el vector que contiene los caracteres de la cadena
      */
@@ -89,7 +89,7 @@ public class Array4 {
     }
     
     /**
-     * Función que queremos que nos ponga lo que escribamos pero al revés
+     * Pone lo que escribamos pero al revés
      * @param frase .Frase o palabra que queremos poner al revés
      * @return fin, que es un String que sea frase, pero al revés
      */
@@ -103,7 +103,7 @@ public class Array4 {
     }
     
     /**
-     * Función que pasa lo que escribamos a mayúsculas
+     * Pasa lo que escribamos a mayúsculas
      * @param cadena . Cadena es la cadena de texto que pasamos para que lo pase
      * @return may, que es la cadena pero ya en mayúsculas
      */
@@ -121,12 +121,12 @@ public class Array4 {
             /*Convertimos que si hay un '_', lo pase a un espacio*/
             if(letras[i] == '_'){
                 letras[i] = ' ';
-                may += letras[i];
+                may += letras[i]; // vacio.charAt(i)
             }
             /*Hacemos que pase las letras en minúsculas a mayusculas. Para ello
             juntamos las letras y si esta en minúscula hacemos que le reste 32,
             que es la misma letra pero en mayúscula. Lo casteamos a char*/
-            if(letras[i] <= 122 && letras[i] >= 97){
+            if(letras[i] <= 'z' && letras[i] >= 'a'){
                 may += (char)(letras[i]-32);
             }else{
                 may += letras[i];

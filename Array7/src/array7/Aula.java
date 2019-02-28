@@ -35,8 +35,48 @@ public class Aula {
     
     public double mediaTotal(){
         double media = 0;
-        
-        return media;
+        for(int[] fila:this.notas){
+            for(int n:fila){
+                media = media + n;
+            }
+        }
+        return media/this.notas.length;
+    }
+    
+    public double mediaAlumno(int alumno){
+        double media = 0;
+        for(int i = 0;i < this.notas[alumno].length;i++){
+            media = media + this.notas[alumno][i];
+        }
+        return media/this.notas[alumno].length;
+    }
+    
+    public double mediaMateria(int materia){
+        double media = 0;
+        for(int i = 0; i < this.notas.length;i++){
+            media = media + this.notas[materia][i];
+        }
+        return media/this.alumnos.length;
+    }
+    
+    public int notaMax(int materia){
+        int max = 0;
+        for(int i = 0; i < this.notas.length;i++){
+            if(this.notas[i][materia] > max){
+            max = this.notas[i][materia];
+            }
+        }
+        return max;
+    }
+    
+    public int notaMin(int materia){
+        int min = 10;
+        for(int i = 0; i < this.notas.length;i++){
+            if(this.notas[i][materia] < min){
+                min = this.notas[i][materia];
+            }
+        }
+        return min;
     }
     
 }
